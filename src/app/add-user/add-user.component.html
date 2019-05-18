@@ -1,3 +1,147 @@
-<p>
-  add-user works!
-</p>
+<div class="container">
+  <form class="user-list-form">
+    <div class="row">
+      <div class="form-group col">
+        <label for="user_firstname">Adınız</label>
+        <input class="form-control form-control-lg" type="text" placeholder="Adınız" id="user_firstname">
+      </div>
+      <div class="form-group col">
+        <label for="user_lastname">Soyadınız</label>
+        <input class="form-control form-control-lg" type="text" placeholder="Soyadınız" id="user_lastname">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="user_email">E-posta adresiniz</label>
+        <input type="email" class="form-control form-control-lg" id="user_email" aria-describedby="emailHelp" placeholder="E-posta adresiniz">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group col">
+        <label for="user_phone">Telefon numaranız</label>
+        <input type="phone" class="form-control form-control-lg" id="user_phone" placeholder="Telefon numaranız">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="user_city">Yaşadığınız il</label>
+        <input type="text" class="form-control form-control-lg" id="user_city" aria-describedby="emailHelp" placeholder="Yaşadığınız il">
+      </div>
+      <div class="form-group col">
+        <label for="user_town">Yaşadığınız ilçe</label>
+        <input type="text" class="form-control form-control-lg" id="user_town" placeholder="Yaşadığınız ilçe">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="user_gender">Cinsiyetiniz</label>
+        <select class="custom-select form-control custom-select-lg" id="user_gender">
+          <option value="Erkek">Erkek</option>
+          <option value="Kadın">Kadın</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="user_age">Yaşınız</label>
+        <input type="number" class="form-control form-control-lg" id="user_age" aria-describedby="emailHelp" placeholder="Yaşınız">
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="user_maritalstatus">Medeni durumunuz</label>
+        <select class="custom-select form-control custom-select-lg" id="user_maritalstatus">
+          <option value="Bekar (İlişkisi yok)">Bekar (İlişkisi yok)</option>
+          <option value="Bekar (İlişkisi var)">Bekar (İlişkisi var)</option>
+          <option value="Sözlü/Nişanlı">Sözlü/Nişanlı</option>
+          <option value="Evli">Evli</option>
+          <option value="Dul">Dul</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="user_maritalstatus">Medeni durumunuz</label>
+        <select class="custom-select form-control custom-select-lg" id="user_maritalstatus">
+          <option value="Çocuğum yok">Çocuğum yok</option>
+          <option value="1 çocuk sahini">1 çocuk sahini</option>
+          <option value="1 çocuk sahini">1 çocuk sahini</option>
+          <option value="1 çocuk sahini">1 çocuk sahini</option>
+          <option value="3+">3 ve daha fazla çocuk sahibi</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="user_education">Eğitim durumunuz</label>
+        <select class="custom-select form-control custom-select-lg" id="user_education">
+          <option value="İlkokul">İlkokul</option>
+          <option value="Ortaokul">Ortaokul</option>
+          <option value="Lise">Lise</option>
+          <option value="Lisans">Lisans</option>
+          <option value="Doktora">Doktora</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="user_job">Mesleğiniz</label>
+        <select class="custom-select form-control custom-select-lg" id="user_job">
+          <option value="Asker">Asker</option>
+          <option value="Avukat">Avukat</option>
+          <option value="Devlet memuru">Devlet memuru</option>
+          <option value="Muhasebeci">Muhasebeci</option>
+          <option value="Mühendis">Mühendis</option>
+          <option value="Öğretmen">Öğretmen</option>
+          <option value="Reklamcı">Reklamcı</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+        <label for="user_income">Gelir durumunuz</label>
+        <select class="custom-select form-control custom-select-lg" id="user_income">
+          <option value="Gelirim yok">Gelirim yok</option>
+          <option value="1500-2500TL">1500-2500TL</option>
+          <option value="2501-3500TL">2500-3500TL</option>
+          <option value="3501-4500TL">3500-4500TL</option>
+          <option value="4501-5500TL">4500-5500TL</option>
+          <option value="7500TL üzeri">7500TL üzeri</option>
+        </select>
+      </div>
+      <div class="form-group col">
+        <label for="user_job">Mesleğiniz</label>
+        <select class="custom-select form-control custom-select-lg" id="user_job">
+          <option value="Asker">Asker</option>
+          <option value="Avukat">Avukat</option>
+          <option value="Devlet memuru">Devlet memuru</option>
+          <option value="Muhasebeci">Muhasebeci</option>
+          <option value="Mühendis">Mühendis</option>
+          <option value="Öğretmen">Öğretmen</option>
+          <option value="Reklamcı">Reklamcı</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="form-group col">
+          <label>Sahip olduğunuz cihazlar</label>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+          <label class="form-check-label" for="defaultCheck1">
+            Akıllı telefon
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
+          <label class="form-check-label" for="defaultCheck2">
+            Masaüstü/Dizüstü Bilgisayar
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
+          <label class="form-check-label" for="defaultCheck3">
+            Tablet
+          </label>
+        </div>
+      </div>
+      <div class="form-group col">
+          <label for="user_userphone">Akıllı telefon marka ve modeliniz</label>
+          <input type="text" class="form-control form-control-lg" id="user_userphone" aria-describedby="emailHelp" placeholder="Akıllı telefon marka ve modeliniz">
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
