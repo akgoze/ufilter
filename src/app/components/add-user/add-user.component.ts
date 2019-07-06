@@ -9,6 +9,9 @@ import { UserService } from '../../services/user.service';
 })
 export class AddUserComponent implements OnInit {
   newUser: User;
+  user_device_phone = false;
+  user_device_tablet = false;
+  user_device_computer = false;
 
   constructor(
     private _userService: UserService
@@ -17,4 +20,12 @@ export class AddUserComponent implements OnInit {
   ngOnInit() {
   }
 
+  addNewUser({value, valid}: {value: User, valid: boolean}) {
+    if (valid) {
+      this._userService.addNewUser(value);
+      console.log(value);
+    } else {
+      console.log('ERROR');
+    }
+  }
 }
