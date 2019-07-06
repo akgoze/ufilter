@@ -23,4 +23,23 @@ export class UserService {
     this.UserCollection.add(user);
   }
 
+  // getUserList() {
+  //   this.UserCollection = this._afs.collection('users');
+  // }
+
+
+  userList() {
+    this.UserCollection = this._afs.collection<User>('users');
+
+    this.users = this.UserCollection.snapshotChanges().pipe(
+      map(action => action.map(a => {
+        const data = a.payload.doc.data() as User;
+        const id = a.payload.doc.id;
+        return {id, ...data};
+      }))
+    );
+
+    return this.users;
+  }
+
 }
