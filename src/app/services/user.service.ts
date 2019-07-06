@@ -42,4 +42,8 @@ export class UserService {
     return this.users;
   }
 
+  userDetails(userId) {
+    this.UserDoc = this._afs.collection<User>('users').doc(userId);
+    return this.user = this.UserDoc.valueChanges();
+  }
 }
