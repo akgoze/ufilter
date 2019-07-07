@@ -29,7 +29,7 @@ export class UserService {
 
 
   userList() {
-    this.UserCollection = this._afs.collection<User>('users');
+    this.UserCollection = this._afs.collection<User>('users', ref => ref.orderBy('user_firstname'));
 
     this.users = this.UserCollection.snapshotChanges().pipe(
       map(action => action.map(a => {
