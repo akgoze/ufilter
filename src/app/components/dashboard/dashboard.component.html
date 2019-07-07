@@ -1,0 +1,36 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-posta adresi</th>
+      <th scope="col">Telefon numarası</th>
+      <th scope="col">Yaşadığınız İl</th>
+      <th scope="col">Yaşadığınız İlçe</th>
+      <th scope="col">Cinsiyetiniz</th>
+      <th scope="col">Medeni durumunuz</th>
+      <th scope="col">Eğitim durumunuz</th>
+      <th scope="col">Mesleğiniz</th>
+      <th scope="col">Gelir durumunuz</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users | async; index as i;">
+      <th scope="row">{{i+1}}</th>
+      <td><a href="#" (click)="displayUserDetail(user.id)">{{user.user_firstname}} {{user.user_lastname}}</a></td>
+      <td>{{user.user_email}}</td>
+      <td>{{user.user_tel}}</td>
+      <td>{{user.user_city}}</td>
+      <td>{{user.user_town}}</td>
+      <td>{{user.user_gender}}</td>
+      <td>{{user.user_maritalstatus}}</td>
+      <td>{{user.user_education}}</td>
+      <td>{{user.user_job}}</td>
+      <td>{{user.user_income}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="user-detail" [hidden]="!userDetailShow">
+  {{user.user_firstname}}
+</div>
