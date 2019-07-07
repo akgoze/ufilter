@@ -31,6 +31,17 @@
   </tbody>
 </table>
 
+<label for="selectgender">by City:</label>
+<select id="selectgender" [(ngModel)]="fiterByGender" name="fiterByGender" (change)="displayCityList('user_city',fiterByGender)">
+  <option value="İstanbul">İstanbul</option>
+  <option value="Ankara">Ankara</option>
+  <option value="İzmir">İzmir</option>
+</select>
+<label for="selectgender">by Gender:</label>
+<select id="selectgender" [(ngModel)]="fiterByGender" name="fiterByGender" (change)="displayCityList('user_gender',fiterByGender)">
+  <option value="Erkek">Erkek</option>
+  <option value="Kadın">Kadın</option>
+</select>
 <div class="user-detail" [hidden]="!userDetailShow">
   {{user.user_firstname}}
 </div>

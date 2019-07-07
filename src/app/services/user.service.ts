@@ -42,6 +42,25 @@ export class UserService {
     return this.users;
   }
 
+
+  userListByFilter(filterkey, filtervalue) {
+    this.UserCollection = this._afs.collection<User>('users',
+    ref => ref.where(
+      filterkey, '==', filtervalue
+    )
+    );
+
+    this.users = this.UserCollection.snapshotChanges().pipe(
+      map(action => action.map(a => {
+        const data = a.payload.doc.data() as User;
+        const id = a.payload.doc.id;
+        return {id, ...data};
+      }))
+    );
+
+    return this.users;
+  }
+
   userDetails(userId) {
     this.UserDoc = this._afs.collection<User>('users').doc(userId);
     return this.user = this.UserDoc.valueChanges();

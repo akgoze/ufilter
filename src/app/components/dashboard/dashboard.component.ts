@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
 })
 export class DashboardComponent implements OnInit {
   user: User;
@@ -20,7 +20,6 @@ export class DashboardComponent implements OnInit {
 
   ngOnInit() {
     this.users = this._userService.userList();
-    console.log(this.users);
   }
 
   displayUserDetail(userID: string) {
@@ -32,6 +31,10 @@ export class DashboardComponent implements OnInit {
     }, error => {
       this.userDetailShow = false;
     });
+  }
+
+  displayCityList(filterkey: string, filtervalue: string) {
+    this.users = this._userService.userListByFilter(filterkey, filtervalue);
   }
 
 }
