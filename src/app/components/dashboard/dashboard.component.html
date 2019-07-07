@@ -43,5 +43,13 @@
   <option value="Kadın">Kadın</option>
 </select>
 <div class="user-detail" [hidden]="!userDetailShow">
-  {{user.user_firstname}}
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">{{user.user_firstname}} {{user.user_lastname}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">{{user.user_job}}</h6>
+      <p class="card-text"><strong>Cinsiyet:</strong> {{user.user_gender}} <br><strong>Medeni durumu: </strong>{{user.user_maritalstatus}} <br><strong>Eğitim durumu: </strong>{{user.user_education}}</p>
+      <a href="#" class="card-link">Add to Test</a>
+      <a href="#" class="card-link">Edit User</a>
+    </div>
+  </div>
 </div>
