@@ -17,6 +17,8 @@ import { AddUserComponent } from './components/add-user/add-user.component';
 import { LoginComponent } from './components/login/login.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { UserDetailComponent } from './components/user-detail/user-detail.component';
+import { AddTestComponent } from './components/add-test/add-test.component';
+import { TestsComponent } from './components/tests/tests.component';
 
 
 @NgModule({
@@ -29,6 +31,8 @@ import { UserDetailComponent } from './components/user-detail/user-detail.compon
     LoginComponent,
     SidebarComponent,
     UserDetailComponent,
+    AddTestComponent,
+    TestsComponent,
   ],
   imports: [
     FormsModule,
